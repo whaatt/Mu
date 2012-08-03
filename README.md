@@ -20,7 +20,7 @@ An Implementation of Anonymous Functions in Python.
 - Do not use the variable ```temporary```.
 
 ### Bugs
-- Does not support constructs like def yet.
+- Does not support constructs like `def` yet.
 - Multiple arguments must be passed as arrays.
 
 ### Name
