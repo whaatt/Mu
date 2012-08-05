@@ -18,11 +18,8 @@ An Implementation of Anonymous Functions in Python.
 - Use the variable ```a``` to use function arguments.
 - Use the function ```t``` for doing recursion.
 - Do not use the variable ```temporary```.
-
-### Bugs
-- Does not support constructs like `def` yet.
-- Multiple arguments must be passed as arrays.
+- In place of tabs for constructs, use a colon.
 
 ### Name
 - Can you figure out why this is named Mu?
-- Hint: Look at the Greek alphabet.
+- Look at the Greek alphabet for a hint.
