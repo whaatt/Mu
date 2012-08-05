@@ -12,3 +12,6 @@ print(example(4)) #Result: 16
 
 print(f('return a*3')(4)) #Result: 12
 print(f('cube = a**3; return cube')(4)) #Result: 64
+
+print(f('def hello(number):; :if number==3:; ::return 3; :else:; ::return 0; return hello(a)')(3)) #Result: 3
+print(f('def pi():; :return 3.1415926535897932384626433832795028841971693993751; return pi()')()) #Result: PI
