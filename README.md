@@ -24,7 +24,7 @@ An Implementation of Anonymous Functions in Python.
 - Separate every single line with semicolons.
 - In place of tabs for constructs, use a colon.
 
-## Warning
+### Warning
 - Do not use ```mu``` and what you imported it as for variable names.
 - Please avoid variables with leading and trailing triple underscores.
 
