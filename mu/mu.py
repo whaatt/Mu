@@ -1,43 +1,43 @@
-def mu(function):
-	def anonymous(a=0):
+def mu(___function___):
+	def ___anonymous___(a=0):
 		def t(a):
-			return anonymous(a)
+			return ___anonymous___(a)
 			
-		code = function.split(';')		
-		lines = []
+		___code___ = ___function___.split(';')		
+		___lines___ = []
 		
-		for pos in range(len(code)):
-			tabs = 0
-			updated = code[pos]
-			updated = updated.strip()
-			for char in updated:
-				if char == ':':
-					tabs = tabs + 1
+		for ___pos___ in range(len(___code___)):
+			___tabs___ = 0
+			___updated___ = ___code___[___pos___]
+			___updated___ = ___updated___.strip()
+			for ___char___ in ___updated___:
+				if ___char___ == ':':
+					___tabs___ = ___tabs___ + 1
 				else:
 					break
-			if tabs > 0:
-				updated = '\t'*tabs + updated[tabs:]
-				updated = lines[len(lines)-1] + '\n' + updated
-				lines.pop()
-			lines.append(updated)
+			if ___tabs___ > 0:
+				___updated___ = '\t'*___tabs___ + ___updated___[___tabs___:]
+				___updated___ = ___lines___[len(___lines___)-1] + '\n' + ___updated___
+				___lines___.pop()
+			___lines___.append(___updated___)
 			
-		for line in lines:			
-			if line[0:7] == 'return ':
-				locals()['temporary'] = locals()['a']
+		for ___line___ in ___lines___:			
+			if ___line___[0:7] == 'return ':
+				locals()['___temporary___'] = locals()['a']
 				globals()['a'] = locals()['a']
-				out = eval(line[7:])
-				locals()['a'] = locals()['temporary']
-				return out
+				___out___ = eval(___line___[7:])
+				locals()['a'] = locals()['___temporary___']
+				return ___out___
 			
 			try:
-				locals()['temporary'] = locals()['a']
+				locals()['___temporary___'] = locals()['a']
 				globals()['a'] = locals()['a']
-				eval(line)
-				locals()['a'] = locals()['temporary']
+				eval(___line___)
+				locals()['a'] = locals()['___temporary___']
 			except SyntaxError:
-				locals()['temporary'] = locals()['a']
+				locals()['___temporary___'] = locals()['a']
 				globals()['a'] = locals()['a']
-				exec(line)
-				locals()['a'] = locals()['temporary']
+				exec(___line___)
+				locals()['a'] = locals()['___temporary___']
 	
-	return anonymous
+	return ___anonymous___
