@@ -1,6 +1,6 @@
 Mu
 =============
-An Implementation of Anonymous Functions in Python.
+An Implementation of Multi-Line Anonymous Functions in Python.
 
 - Written in pure Python 3.
 - Importable as a module.
