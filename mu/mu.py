@@ -3,13 +3,28 @@ def mu(___function___):
 		def t(a):
 			return ___anonymous___(a)
 			
-		___code___ = ___function___.split(';')		
-		___lines___ = []
+		___code___ = ___function___.split(';')
 		
-		for ___pos___ in range(len(___code___)):
+		___codes___ = []
+		___lines___ = []
+		___posit___ = 0
+		
+		while ___posit___ < len(___code___):
+			if ___code___[___posit___] == '' and len(___codes___) > 0:
+				___new___ = ___codes___[len(___codes___)-1] + ';' + ___code___[___posit___+1]
+				___codes___.pop()
+				___codes___.append(___new___)
+				___posit___ = ___posit___ + 2
+			else:
+				___codes___.append(___code___[___posit___])
+				___posit___ = ___posit___ + 1
+		
+		for ___pos___ in range(len(___codes___)):
 			___tabs___ = 0
-			___updated___ = ___code___[___pos___]
+			___updated___ = ___codes___[___pos___]
 			___updated___ = ___updated___.strip()
+			for ___seq___ in [['\\','\\\\'],['\n','\\n'],['\t','\\t']]:
+				___updated___ = ___updated___.replace(___seq___[0], ___seq___[1])
 			for ___char___ in ___updated___:
 				if ___char___ == ':':
 					___tabs___ = ___tabs___ + 1

@@ -3,13 +3,28 @@ def mu(function):
 		def t(a):
 			return anonymous(a)
 			
-		code = function.split(';')		
-		lines = []
+		code = function.split(';')
 		
-		for pos in range(len(code)):
+		codes = []
+		lines = []
+		posit = 0
+		
+		while posit < len(code):
+			if code[posit] == '' and len(codes) > 0:
+				new = codes[len(codes)-1] + ';' + code[posit+1]
+				codes.pop()
+				codes.append(new)
+				posit = posit + 2
+			else:
+				codes.append(code[posit])
+				posit = posit + 1
+		
+		for pos in range(len(codes)):
 			tabs = 0
-			updated = code[pos]
+			updated = codes[pos]
 			updated = updated.strip()
+			for seq in [['\\','\\\\'],['\n','\\n'],['\t','\\t']]:
+				updated = updated.replace(seq[0], seq[1])
 			for char in updated:
 				if char == ':':
 					tabs = tabs + 1

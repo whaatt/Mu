@@ -27,6 +27,8 @@ An Implementation of Multi-Line Anonymous Functions in Python.
 ### Warning
 - Do not use ```mu``` and what you imported it as for variable names.
 - Please avoid variables with leading and trailing triple underscores.
+- To type a semicolon that is not a line break, use `;;` as needed.
+- Escape sequences should work normally, as much as I have tested them.
 
 ### Name
 - Can you figure out why this is named Mu?
