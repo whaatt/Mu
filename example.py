@@ -32,10 +32,10 @@ if True:
 foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]
 
 print ([i for i in filter(f('''
-		for i in range(2, round(a**0.5) + 1): #check primality
-			if a%i == 0: return False
-		return True
-	''', False), foo)]) #Result: [2, 17]
+	for i in range(2, round(a**0.5) + 1): #check primality
+		if a%i == 0: return False
+	return True
+''', False), foo)]) #Result: [2, 17]
 	
 #Functions As Variables
 
