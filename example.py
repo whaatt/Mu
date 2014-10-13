@@ -23,7 +23,7 @@ from mu import mu
 #recursion is done using t() and
 #input is specified by variable a
 
-#g is similarly a convience wrapper
+#g is similarly a convenience wrapper
 #for multiline mode using the same
 #altered recursion and parameter names
 
